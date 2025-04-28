@@ -479,12 +479,6 @@ pub mod tools {
 
         Err("Variable type not found".into())
     }
-
-    // Support function (placeholder)
-    pub fn deploy_program_with_fireblocks() {
-        use solana_cli::program;
-        program::process_program_subcommand(todo!(), todo!(), todo!());
-    }
 }
 
 #[cfg(test)]

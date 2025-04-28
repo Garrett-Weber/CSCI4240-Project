@@ -2,6 +2,7 @@
 name = "sol-util"
 version = "0.1.0"
 edition = "2021"
+build = "build.rs"
 
 [dependencies]
 anchor-gen = "0.3.1"
