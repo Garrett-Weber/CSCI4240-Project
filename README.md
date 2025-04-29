@@ -72,11 +72,14 @@ sol-util \
   --path variable.path2 --value VALUE2
 ```
 
-#### Example
+#### Examples
 
 ```bash
 # Find Custody accounts with maxLeverage of "BUvduFTd2sWFagCunBPLupG8fBTJqweLw9DuhruNFSCm" and print most common isStable values
 sol-util --  -r "https://mainnet.helius-rpc.com/?api-key=" -i ./sol-tools/test/perpetuals.json -p PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu -n Custody --path tokenAccount --value "BUvduFTd2sWFagCunBPLupG8fBTJqweLw9DuhruNFSCm" -s isStable
+
+# Find PositionRequest accounts with specific Custody and find most common sizeUsdDelta values
+sol-util --  -r "https://mainnet.helius-rpc.com/?api-key=" -i ./sol-tools/test/perpetuals.json -p PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu -n PositionRequest --path custody --value "7xS2gz2bTp3fwCC7knJvUWTEU9Tycczu6VhJYKgi1wdz"  --interest sizeUsdDelta
 ```
 
 ### Library Usage
