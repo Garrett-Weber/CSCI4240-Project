@@ -75,14 +75,8 @@ sol-util \
 #### Example
 
 ```bash
-# Find Custody accounts with maxLeverage of 5000000 and isStable=true
-sol-util \
-  --rpc https://api.mainnet-beta.solana.com \
-  --idl ./idl/perpetuals.json \
-  --program PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu \
-  --name Custody \
-  --path pricing.maxLeverage --value 5000000 \
-  --path isStable --value true
+# Find Custody accounts with maxLeverage of "BUvduFTd2sWFagCunBPLupG8fBTJqweLw9DuhruNFSCm" and print most common isStable values
+sol-util --  -r "https://mainnet.helius-rpc.com/?api-key=" -i ./sol-tools/test/perpetuals.json -p PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu -n Custody --path tokenAccount --value "BUvduFTd2sWFagCunBPLupG8fBTJqweLw9DuhruNFSCm" -s isStable
 ```
 
 ### Library Usage
